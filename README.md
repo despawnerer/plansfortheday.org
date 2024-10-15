@@ -6,4 +6,4 @@ There’s really nothing to see here. Visit the site!
 
 ## The site
 
-http://plansfortheday.org/
+Right there: http://plansfortheday.org/
