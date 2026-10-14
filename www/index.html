@@ -14,6 +14,25 @@
         line-height: 1.5;
         background: white;
         color: #222;
+        min-height: calc(100vh - 60px);
+        display: flex;
+        flex-direction: column;
+    }
+
+    header {
+        padding: 20px;
+        height: 150px;
+        width: 150px;
+        line-height: 1;
+        display: flex;
+        margin-bottom: 32px;
+        align-items: center;
+        border: 6px dashed silver;
+    }
+
+    header h1 {
+        margin: 0;
+        width: 100px; /* to wrap every word */
     }
 
     article,
@@ -34,8 +53,9 @@
     }
 
     #container {
+        width: 100%;
         max-width: 700px;
-        margin: 0 auto;
+        margin: auto;
     }
 
     h1 {
@@ -77,33 +97,8 @@
         margin-right: 20px;
     }
 
-    .thing-list p {
-        margin: 15px 0;
-    }
-    .thing-list p:first-of-type {
-        margin-top: 0;
-    }
-    .thing-list p:last-of-type {
-        margin-bottom: 0;
-    }
-
     .description {
         overflow: hidden;
-    }
-
-    .code-links {
-        list-style: none;
-        margin: 5px 0 0 0;
-        padding: 0;
-    }
-
-    .code-links > li {
-        display: inline;
-    }
-
-    .code-links > li:not(:last-child)::after {
-        content: " • ";
-        color: gray;
     }
 
     @media (max-width: 600px) {
@@ -116,63 +111,20 @@
 
 <article id="container">
     <header>
-        <h1>plans for the day dot org</h1>
+        <h1>plans for the day</h1>
     </header>
 
-    <p>Hi!</p>
-    <p>I’m Aleksei and this is my cozy homepage.</p>
+    <p>Hi! I’m Aleksei and this is my homepage.</p>
     <p>
         I live and work in Amsterdam. I’m&nbsp;a&nbsp;dad of two girls,
-        a&nbsp;film lover, an&nbsp;amateur climber and a&nbsp;hobby runner. Talk
+        a&nbsp;film lover, an&nbsp;amateur climber and a&nbsp;casual runner. Talk
         to me about any of these things!
     </p>
     <p>
-        Professionally, I&nbsp;make software that works. I&nbsp;prefer simple
-        over complicated, concise over verbose, explicit over implicit,
-        beautiful over messy. I’m&nbsp;a&nbsp;perpetual learner.
+        Professionally, I&nbsp;build software that works. I&nbsp;prefer simple over
+        complicated, concise over verbose, explicit over implicit, beautiful over messy.
+        <a href="mailto:despawn@gmail.com">Hire me</a> if that's what you want.
     </p>
-
-    <section>
-        <h2>I've got</h2>
-        <ul class="thing-list">
-            <li>
-                <h3 class="thing">
-                    a
-                    <a href="https://github.com/despawnerer" target="_blank"
-                        >GitHub</a
-                    >
-                </h3>
-                <p class="description">With code that I&nbsp;wrote</p>
-            </li>
-            <li>
-                <h3 class="thing">
-                    a
-                    <a
-                        href="https://letterboxd.com/despawnerer/"
-                        target="_blank"
-                        >Letterboxd</a
-                    >
-                </h3>
-                <p class="description">
-                    With a&nbsp;log of&nbsp;movies that I&nbsp;watched
-                </p>
-            </li>
-            <li>
-                <h3 class="thing">
-                    a
-                    <a
-                        href="https://bsky.app/profile/aleksei.nl"
-                        target="_blank"
-                        >BlueSky</a
-                    >
-                </h3>
-                <p class="description">
-                    With random ramblings
-                    <small class="not-bold">(in&nbsp;Russian)</small>
-                </p>
-            </li>
-        </ul>
-    </section>
 
     <section>
         <h2>Get in touch</h2>
@@ -193,11 +145,29 @@
                     >
                 </div>
             </li>
-            <li></li>
+            <li>
+                <div class="thing">GitHub:</div>
+                <div class="description">
+                    <a
+                        href="https://github.com/despawnerer"
+                        target="_blank"
+                        >@despawnerer</a
+                    >
+                </div>
+            </li>
+            <li>
+                <div class="thing">Letterboxd:</div>
+                <div class="description">
+                    <a
+                        href="https://letterboxd.com/despawnerer/"
+                        target="_blank"
+                    >@despawnerer</a>
+                </div>
+            </li>
         </ul>
     </section>
 
-    <footer>I updated this page last time on 22 Jun 2026.</footer>
+    <footer>I updated this page last time on 14 Oct 2026.</footer>
 </article>
 
 <script type="application/ld+json">
